@@ -23,12 +23,14 @@ const msBtn = document.querySelector(".ms-btn");
 //Una volta cliccato il tasto play mi fa vedere il cambo da gioco
 msBtn.addEventListener('click', function() {
     console.log("btn play clicked");
+    mainGrid.innerHTML = '';
+
+    for(let i = 1; i <= 100; i++) {
+        const newSquare = generateSquare(i);
+        mainGrid.append(newSquare);
+    }
 })
 
-for(let i = 1; i <= 100; i++) {
-    const newSquare = generateSquare(i);
-    mainGrid.append(newSquare);
-}
 
 //ELABORAZIONE DATI
 
